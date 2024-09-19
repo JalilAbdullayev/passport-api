@@ -4,9 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class UpdateAuthorRequest extends FormRequest {
+class UpdateBookRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      */
@@ -21,7 +20,7 @@ class UpdateAuthorRequest extends FormRequest {
      */
     public function rules(): array {
         return [
-            'name' => [Rule::unique('authors')->ignore($this->name), 'required', 'max:255'],
+            //
         ];
     }
 }

@@ -20,7 +20,7 @@ class StoreAuthorRequest extends FormRequest {
      */
     public function rules(): array {
         return [
-            //
+            'name' => 'required|unique:authors|max:255',
         ];
     }
 }
